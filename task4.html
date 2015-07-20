@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<title>Form</title>
 	</head>
 	<!-- #F9F2E7 list color #8FBE00 color background color #27ae60 hover in button -->
@@ -60,6 +60,9 @@ input[type='radio']:checked + label {
 				
 			}
 			.control-label{}
+			.awesome{
+				
+			}
 	</style>
 	<body>
 		<div class="myModal">
@@ -117,18 +120,21 @@ input[type='radio']:checked + label {
 						<textarea name="textarea" rows="3" cols='45' id="about"></textarea>
 					</div>
 					<div class="form-group">
+						Choose your photo
 						<input class="btn" type="file">
 					</div>
 					<div class="form-group">
-						<select name="Transport" class="btn-green rounded" id="">
-							<option value="Classic mail">Classic mail
-								<i class="fa fa-envelope-o"></i>
+						Chose transport
+						<select name="Transport" class="btn-green awesome rounded" id="">	
+										
+							<option value="Classic mail">
+								<i class="fa fa-envelope-o fa-lg"></i>
 							</option>
 							<option value="Ups Delivery">Ups Delivery
-								<i class="fa fa-truck"></i>
+								<i class="fa fa-truck fa-lg"></i>
 							</option>
 							<option value="Private jet">Private jet
-								<i class="fa fa-plane"></i>
+								<i class="fa fa-plane fa-lg"></i>
 							</option>
 						</select>
 					</div>
