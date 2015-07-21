@@ -4,21 +4,19 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.5/css/bootstrap-select.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="green.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="check.js"></script>
 		<title>Form</title>
 	</head>
 	<!-- #F9F2E7 list color #8FBE00 color background color #27ae60 hover in button -->
 	<style>
-	
- 
-input[type='radio']:checked + label {
-	background: green;
-   background-position: 0 0;
-}
 		.rounded {
    -webkit-border-radius: 20px;
    -moz-border-radius: 20px;
    border-radius: 20px;
-}
+		}
 		span{
 				color: red;
 			}
@@ -61,7 +59,7 @@ input[type='radio']:checked + label {
 			}
 			.control-label{}
 			.awesome{
-				
+				font-family: 'FontAwesome', 'Helvetica';
 			}
 	</style>
 	<body>
@@ -119,17 +117,12 @@ input[type='radio']:checked + label {
 						</label>
 						<textarea name="textarea" rows="3" cols='45' id="about"></textarea>
 					</div>
-					<div class="form-group">
-						Choose your photo
+					<div class="form-group">Choose your photo
 						<input class="btn" type="file">
 					</div>
-					<div class="form-group">
-						Chose transport
-						<select name="Transport" class="btn-green awesome rounded" id="">	
-										
-							<option value="Classic mail">
-								<i class="fa fa-envelope-o fa-lg"></i>
-							</option>
+					<div class="form-group">Chose transport
+						<select name="Transport" class="selectpicker " id="">
+							<option data-icon='glyphicon-heart'>Classic mail</option>
 							<option value="Ups Delivery">Ups Delivery
 								<i class="fa fa-truck fa-lg"></i>
 							</option>
@@ -139,17 +132,21 @@ input[type='radio']:checked + label {
 						</select>
 					</div>
 					<div class="form-group">
-						<input name="plan" type="radio" />Standart
+						<input name="iCheck" type="radio" />Standart
 						<br/>
-						<input name="plan" type="radio" />Normal
+						<input name="iCheck" type="radio" />Normal
 						<br/>
-						<input name="plan" type="radio" />Full
+						<input name="iCheck" type="radio" />Full
 						<br/>
 					</div>
 					<div class="form-group">
+						<label for="">	Shoping info
+						<input type="checkbox" class="circle-chekbox" />
+						Base shaping
 						<input type="checkbox" class="circle-chekbox" />
 						<input type="checkbox" class="circle-chekbox" />
-						<input type="checkbox" class="circle-chekbox" />
+					</label>
+
 					</div>
 					<div class="form-group">
 						<input type="checkbox" />
@@ -171,6 +168,23 @@ input[type='radio']:checked + label {
 				<input type="submit">
 			</form>
 		</div>
+		<script>
+$(document).ready(function(){
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_minimal',
+    radioClass: 'iradio_minimal',
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $('input').iCheck({
+    checkboxClass: 'icheckbox_minimal-green',
+    radioClass: 'iradio_minimal-green',
+    // increaseArea: '20%' // optional
+  });
+});
+</script>
 	</body>
 
 </html>
